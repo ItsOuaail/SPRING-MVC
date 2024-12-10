@@ -2,12 +2,10 @@ package com.rungroop.demo.dto;
 
 import lombok.Builder;
 import lombok.Data;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
 import java.time.LocalDateTime;
-@Data
+
 @Builder
+@Data
 public class ClubDto {
     private Long id;
     private String title;
