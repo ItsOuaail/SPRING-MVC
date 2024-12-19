@@ -1,4 +1,5 @@
 package com.rungroop.demo.controller;
+
 import org.springframework.ui.Model;
 import com.rungroop.demo.dto.ClubDto;
 import com.rungroop.demo.service.ClubService;
@@ -18,6 +19,7 @@ public class ClubController {
     @GetMapping("/clubs")
     public String listClubs(Model model) {
         List<ClubDto> clubs = clubService.findAllClubs();
+        System.out.println("Clubs: " + clubs); // Debugging
         model.addAttribute("clubs", clubs);
         return "clubs-list";
     }
